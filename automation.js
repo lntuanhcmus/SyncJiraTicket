@@ -23,6 +23,10 @@ async function main() {
         console.log(result3);
 
         console.log("All steps have been successfully completed!");
+        process.on("exit", () => {
+            console.log("Task was completed. Stop process in pm2...");
+            require("child_process").exec("pm2 stop 'sync-jira-ticket'");
+        });
     } catch (error) {
         console.error("Error in the process:", error);
     }

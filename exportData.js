@@ -83,6 +83,10 @@ async function exportData() {
     } catch (error) {
         console.error("Error:", error);
     } finally {
+
+        setTimeout(() => {
+            driver.quit();
+        }, 10000);
     }
 };
 
