@@ -1,2 +1,0 @@
-# SyncJiraTicket
-Automation Workflow
